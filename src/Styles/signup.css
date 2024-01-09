@@ -1,0 +1,58 @@
+.top-box{
+    width: 920px;
+height: 142px;
+border: 1px solid #E0E0E0;
+background: #FFF;
+}
+.top-box h2{
+    color: #000;
+font-family: Manrope;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.top-box p{
+    color: #000;
+font-family: Manrope;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.bot-box{
+    width: 920px;
+height: 693px;
+border: 1px solid #E0E0E0;
+background: #FFF;
+}
+.username123{
+    display: flex;
+    flex-direction: column;
+}
+.labelf123{
+    color: #000;
+font-family: Manrope;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.inputf123{
+    width: 250px;
+height: 32px;
+border: 1px solid #E0E0E0;
+background: #FFF;
+}
+.bot-box h2 {
+    color: #000;
+font-family: Manrope;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.blue-asterisk {
+    color: blue;
+  }
+  

@@ -10,7 +10,9 @@ import Testimonials from "./Components/Testimonials";
 import data from "./data.json";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
-import Loginjob from "./Components/loginjob";
+import Loginemp from './Components/Loginemp'
+import Loginjobb from "./Components/Loginjobb";
+import Signup from "./Components/Signup";
 
 function App() {
   return (
@@ -29,7 +31,9 @@ function App() {
               </>
             }
           />
-          <Route path="/login" element={<Loginjob />} />
+                              <Route path="/signup"element={<Signup />} />
+                    <Route path="/login"element={<Loginjobb />} />
+          <Route path="/loginemp"element={<Loginemp />} />
           {/* <Route path="/testimonials" element={<Testimonials testimonialData={data} />} /> */}
         </Routes>
         <Footer />
