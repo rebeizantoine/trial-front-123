@@ -1,0 +1,20 @@
+#country {
+    width: 250px; /* Make the dropdown width 100% */
+    padding: 10px; /* Add padding for better appearance */
+    font-size: 16px; /* Set the font size */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    margin-bottom: 30px;
+    margin-left: -200px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  /* Style for the "select country" option */
+  #country option {
+    color: #888; /* Set a gray color for the placeholder text */
+  }
+  
+  /* Style for the selected option */
+  #country option:checked {
+    background-color: #e0e0e0; /* Add background color for the selected option */
+  } 

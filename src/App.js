@@ -10,9 +10,14 @@ import Testimonials from "./Components/Testimonials";
 import data from "./data.json";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
-import Loginemp from './Components/Loginemp'
+import Loginemp from "./Components/Loginemp";
 import Loginjobb from "./Components/Loginjobb";
-import Signup from "./Components/Signup";
+import Signupjob from "./Components/Signupjob";
+import Signupemp from "./Components/Singnupemp";
+import NotFound from "./Components/NotFound";
+import Jobseekpp from "./Components/Jobseekpp";
+import Employerpp from "./Components/Employerpp";
+import Jobdescription from "./Components/Jobdescription";
 
 function App() {
   return (
@@ -31,9 +36,15 @@ function App() {
               </>
             }
           />
-                              <Route path="/signup"element={<Signup />} />
-                    <Route path="/login"element={<Loginjobb />} />
-          <Route path="/loginemp"element={<Loginemp />} />
+          <Route path="/signup" element={<Signupjob />} />
+          <Route path="/login" element={<Loginjobb />} />
+          <Route path="/loginemp" element={<Loginemp />} />
+          <Route path="/signupemp" element={<Signupemp />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/jobseekpp" element={<Jobseekpp />} />
+          <Route path="/employerpp" element={<Employerpp />} />
+          <Route path="/jobdescription" element={<Jobdescription />} />
+
           {/* <Route path="/testimonials" element={<Testimonials testimonialData={data} />} /> */}
         </Routes>
         <Footer />
