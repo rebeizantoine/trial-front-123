@@ -18,6 +18,7 @@ import NotFound from "./Components/NotFound";
 import Jobseekpp from "./Components/Jobseekpp";
 import Employerpp from "./Components/Employerpp";
 import Jobdescription from "./Components/Jobdescription";
+import Category from "./Components/Category";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/jobseekpp" element={<Jobseekpp />} />
           <Route path="/employerpp" element={<Employerpp />} />
           <Route path="/jobdescription" element={<Jobdescription />} />
+          <Route path="/category" element={<Category />} />
 
           {/* <Route path="/testimonials" element={<Testimonials testimonialData={data} />} /> */}
         </Routes>
