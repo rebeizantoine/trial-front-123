@@ -1,0 +1,299 @@
+.border-cv {
+  display: flex;
+  width: 895px;
+  height: 100%;
+  padding: 46px 30px 53px 28px;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  border: 2px solid black;
+  margin-left: 230px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.cv-first-flex {
+  display: flex;
+}
+.cv-first-flex h1 {
+  color: var(--Pure-Black, #000);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.cv-first-flex h1 {
+  color: var(--Pure-Black, #000);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.cv-first-flex h2 {
+  color: var(--Pure-Black, #000);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 16px;
+  margin-left: 15px;
+}
+.cv-second-flex {
+  color: var(--Pure-Black, #000);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 500px;
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+}
+
+.cv-second-flex > div {
+  flex: 1; /* Each child takes equal space */
+}
+.exeperience-flex-1 {
+  display: flex;
+  flex-direction: row;
+}
+.flex-2 {
+  justify-content: right;
+  margin-top: -65px;
+}
+
+.exeperience-flex-2 {
+  display: flex;
+}
+.education-flex-1 {
+  display: flex;
+}
+.education-flex-2 {
+  display: flex;
+}
+.experiencetitle {
+  color: var(--Pure-Black, #000);
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.organization h2 {
+  color: var(--Pure-Black, #000);
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.organization h4 {
+  color: var(--Pure-Black, #000);
+  text-align: right;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.exeperience-flex-2 h3 {
+  color: var(--Pure-Black, #000);
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 121.5%; /* 14.58px */
+  letter-spacing: 0.36px;
+}
+.exeperience-flex-2 h4 {
+  color: var(--Pure-Black, #000);
+  text-align: right;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+.experience-text {
+  color: var(--Pure-Black, #000);
+  text-align: justify;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.exeperience-flex-2 {
+  display: flex;
+}
+.experience-flex-2 h3 {
+  color: var(--Pure-Black, #000);
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 121.5%; /* 14.58px */
+  letter-spacing: 0.36px;
+  max-width: 250px;
+  margin-top: 0px;
+  margin-left: -70px;
+}
+.flex-1 h2 {
+  color: var(--Pure-Black, #000);
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.flex-2 h4 {
+  color: var(--Pure-Black, #000);
+  text-align: right;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.experience-text p::before {
+  content: "\2022"; /* Unicode character for a bullet point (black dot) */
+  color: var(--Pure-Black, #000);
+  margin-right: 8px; /* Adjust the spacing between the dot and text */
+}
+.experience-flex-2 h4 {
+  color: var(--Pure-Black, #000);
+  text-align: right;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  max-width: 250px;
+  margin-top: -35px;
+  margin-left: 548px;
+}
+.education-section h2 {
+  color: var(--Pure-Black, #000);
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.education-name {
+  color: var(--Pure-Black, #000);
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  max-width: 250px;
+}
+.location-education {
+  color: var(--Pure-Black, #000);
+  text-align: right;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 250px;
+  margin-left: 555px;
+  margin-top: 0px;
+}
+.degree-education {
+  color: var(--Pure-Black, #000);
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 310px;
+}
+.additional-explination {
+  color: #000;
+  text-align: justify;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 600px;
+}
+.graduation-date {
+  color: var(--Pure-Black, #000);
+  text-align: right;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  margin-left: 295px;
+}
+.experience-text ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.experience-text li::before {
+  content: "\2022"; /* Unicode character for a bullet point (black dot) */
+  color: var(--Pure-Black, #000);
+  margin-right: 8px; /* Adjust the spacing between the dot and text */
+}
+
+.experience-text li {
+  text-align: justify;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.skills-names ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-names li {
+  width: 25%; /* Display 4 items in each row */
+  text-align: center;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 10px; /* Adjust the spacing between items */
+}
+.skills h2 {
+  color: var(--Pure-Black, #000);
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  justify-content: center;
+  text-align: center;
+  margin-left: 110px;
+}
+
+.hr-bot {
+  width: 885px;
+}
+.cv-first-flex h1 {
+  margin-left: 45px;
+}

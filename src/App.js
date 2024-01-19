@@ -19,7 +19,11 @@ import Jobseekpp from "./Components/Jobseekpp";
 import Employerpp from "./Components/Employerpp";
 import Jobdescription from "./Components/Jobdescription";
 import Category from "./Components/Category";
-
+import Admindash from "./Components/Admindash";
+import Employerdash from "./Components/Employerdash";
+import Removejob from "./Components/removejob";
+import Jobseekdash from "./Components/jobseekdash";
+import Cv from "./Components/cv";
 function App() {
   return (
     <div className="App">
@@ -46,6 +50,11 @@ function App() {
           <Route path="/employerpp" element={<Employerpp />} />
           <Route path="/jobdescription" element={<Jobdescription />} />
           <Route path="/category" element={<Category />} />
+          <Route path="/admindash" element={<Admindash />} />
+          <Route path="/employerdash" element={<Employerdash />} />
+          <Route path="/jobseekdash" element={<Jobseekdash />} />
+          <Route path="/removejob" element={<Removejob />} />
+          <Route path="/cv" element={<Cv />} />
 
           {/* <Route path="/testimonials" element={<Testimonials testimonialData={data} />} /> */}
         </Routes>
