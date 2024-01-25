@@ -1,29 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "../Styles/employerpp.css";
 import editimage from "../Images/edit123.png";
-import editimage123 from "../Images/edit123.png";
-import editimage456 from "../Images/edit123.png";
 import handsalary from "../Images/hand-salary.png";
 import topimage from "../Images/face.png";
-import deleteimage from "../Images/remove.png";
-import logoutimage from "../Images/logout.png";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 const Employerpp = () => {
   const { usernameEmployer } = useParams();
   const [employerData, setEmployerData] = useState(null);
-  const [jobApplications, setJobApplications] = useState([]);
-  const navigate = useNavigate();
 
   const [highestBoxEditMode, setHighestBoxEditMode] = useState(false);
   const [highestBoxEditedData, setHighestBoxEditedData] = useState({
     locationEmployer: "",
     educationEmployer: "",
     experienceEmployer: "",
-    companyrecruitingfor: "",
+    companyRecruitingFor: "",
   });
 
   const [otherBoxesEditMode, setOtherBoxesEditMode] = useState(false);
@@ -36,25 +28,6 @@ const Employerpp = () => {
     companyNumberofemployees: "",
     companyWebsite: "",
   });
-  const [contactInfoEditMode, setContactInfoEditMode] = useState(false);
-  const [contactInfoEditedData, setContactInfoEditedData] = useState({
-    emailEmployer: "",
-    phoneEmployer: "",
-  });
-
-  useEffect(() => {
-    const fetchJobApplications = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:8000/jobdescriptions/employer/${usernameEmployer}`
-        );
-        setJobApplications(response.data);
-      } catch (error) {
-        console.error("Error fetching job applications:", error);
-      }
-    };
-    fetchJobApplications();
-  }, [usernameEmployer]);
 
   useEffect(() => {
     const fetchEmployerData = async () => {
@@ -87,7 +60,6 @@ const Employerpp = () => {
       );
       setEmployerData(response.data.data);
       setHighestBoxEditMode(false);
-      toast.success("data updated successfully");
     } catch (error) {
       console.error("Error updating employer data:", error);
     }
@@ -110,86 +82,17 @@ const Employerpp = () => {
       );
       setEmployerData(response.data.data);
       setOtherBoxesEditMode(false);
-      toast.success("data updated successfully");
     } catch (error) {
       console.error("Error updating employer data:", error);
     }
-  };
-
-  const handleContactInfoEditSave = async () => {
-    try {
-      await axios.put(
-        `http://localhost:8000/employer/employers/update/${employerData._id}`,
-        contactInfoEditedData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const response = await axios.get(
-        `http://localhost:8000/employer/employers/username/${usernameEmployer}`
-      );
-      setEmployerData(response.data.data);
-      setContactInfoEditMode(false);
-      toast.success("Contact information updated successfully");
-    } catch (error) {
-      console.error("Error updating contact information:", error);
-    }
-  };
-
-  const handleDeleteJobDescription = async (id) => {
-    try {
-      const isConfirmed = window.confirm(
-        "Are you sure you want to delete this job listing?"
-      );
-      if (!isConfirmed) {
-        return; // Do nothing if not confirmed
-      }
-
-      await axios.delete(`http://localhost:8000/jobdescriptions/delete/${id}`);
-      // Fetch job applications again after deletion
-      const response = await axios.get(
-        `http://localhost:8000/jobdescriptions/employer/${usernameEmployer}`
-      );
-      setJobApplications(response.data);
-      toast.success("Job application deleted successfully");
-    } catch (error) {
-      console.error("Error deleting job application:", error);
-    }
-  };
-  const handleJobApplicationClick = (id) => {
-    // Navigate to the job description page
-    navigate(`/jobdescriptions/jobdescriptions/${id}`);
-  };
-  const handlePostJobClick = () => {
-    // Navigate to the job post page for the specific employer
-    navigate(`/jobpost/${usernameEmployer}`);
   };
 
   if (!employerData) {
     return <div>Loading...</div>;
   }
 
-  const handleLogout = () => {
-    // Clear sessionStorage and navigate to '/'
-    sessionStorage.clear();
-    navigate("/");
-  };
-
   return (
     <div className="all-boxes-jobseek">
-      <div className="logout-container">
-        {" "}
-        <img
-          onClick={handleLogout}
-          className="logout-image"
-          src={logoutimage}
-          alt="Logout"
-        />
-        <h3>Logout</h3>
-      </div>
-
       <div className="highest-box-1">
         <div className="image-highest">
           <img src={topimage} alt="" />
@@ -217,6 +120,11 @@ const Employerpp = () => {
                   employerData.locationEmployer
                 )}
               </div>
+              {highestBoxEditMode && (
+                <button onClick={() => setHighestBoxEditMode(false)}>
+                  Cancel
+                </button>
+              )}
             </div>
 
             <div className="info-item1">
@@ -239,6 +147,11 @@ const Employerpp = () => {
                   employerData.educationEmployer
                 )}
               </div>
+              {highestBoxEditMode && (
+                <button onClick={() => setHighestBoxEditMode(false)}>
+                  Cancel
+                </button>
+              )}
             </div>
 
             <div className="info-item1">
@@ -261,6 +174,11 @@ const Employerpp = () => {
                   employerData.experienceEmployer
                 )}
               </div>
+              {highestBoxEditMode && (
+                <button onClick={() => setHighestBoxEditMode(false)}>
+                  Cancel
+                </button>
+              )}
             </div>
 
             <div className="info-item1">
@@ -271,27 +189,27 @@ const Employerpp = () => {
                 {highestBoxEditMode ? (
                   <input
                     type="text"
-                    value={highestBoxEditedData.companyrecruitingfor}
+                    value={highestBoxEditedData.companyRecruitingFor}
                     onChange={(e) =>
                       setHighestBoxEditedData({
                         ...highestBoxEditedData,
-                        companyrecruitingfor: e.target.value,
+                        companyRecruitingFor: e.target.value,
                       })
                     }
                   />
                 ) : (
-                  employerData.companyrecruitingfor
+                  employerData.companyRecruitingFor
                 )}
               </div>
+              {highestBoxEditMode && (
+                <button onClick={() => setHighestBoxEditMode(false)}>
+                  Cancel
+                </button>
+              )}
             </div>
           </div>
           {!highestBoxEditMode ? (
-            <img
-              className="editimage123"
-              onClick={() => setHighestBoxEditMode(true)}
-              src={editimage123}
-              alt=""
-            />
+            <button onClick={() => setHighestBoxEditMode(true)}>Edit</button>
           ) : (
             <div>
               <button onClick={() => handleHighestBoxEditSave()}>Save</button>
@@ -352,59 +270,8 @@ const Employerpp = () => {
 
       <div className="beforeside">
         <h2>Company Information</h2>
-        <div className="info-item1-1">
-          <div className="pergunta-1">
-            <strong>Company Name:</strong>
-          </div>
-          <div className="answer-1">{employerData.companyName}</div>
-        </div>
-        <div className="info-item1-1">
-          <div className="pergunta-1">
-            <strong>Company Type:</strong>
-          </div>
-          <div className="answer-1">{employerData.companyType}</div>
-        </div>
-        <div className="info-item1-1">
-          <div className="pergunta-1">
-            <strong>Country:</strong>
-          </div>
-          <div className="answer-1">{employerData.companyCountry}</div>
-        </div>
-        <div className="info-item1-1">
-          <div className="pergunta-1">
-            <strong>Address:</strong>
-          </div>
-          <div className="answer-1">{employerData.nationalityEmployer}</div>
-        </div>
-        <div className="info-item1-1">
-          <div className="pergunta-1">
-            <strong>Phone:</strong>
-          </div>
-          <div className="answer-1">{employerData.companyPhone}</div>
-        </div>
-        <div className="info-item1-1">
-          <div className="pergunta-1">
-            <strong>Company Profile:</strong>
-          </div>
-          <div className="answer-1">{employerData.companyProfile}</div>
-        </div>
-        <div className="info-item1-1">
-          <div className="pergunta-1">
-            <strong>Number of employees:</strong>
-          </div>
-          <div className="answer-1">
-            {employerData.companyNumberofemployees}
-          </div>
-        </div>
-        <div className="info-item1-1">
-          <div className="pergunta-1">
-            <strong>Website:</strong>
-          </div>
-          <div className="answer-1">{employerData.companyWebsite}</div>
-        </div>
-
         {otherBoxesEditMode ? (
-          <div className="editing-box">
+          <div>
             <div className="info-box-1">
               <label>
                 Company Name:
@@ -520,10 +387,9 @@ const Employerpp = () => {
             <button onClick={() => setOtherBoxesEditMode(false)}>Cancel</button>
           </div>
         ) : (
-          <div className="info-box-12">
+          <div className="info-box-1">
             <img
               onClick={() => setOtherBoxesEditMode(true)}
-              className="imageofedit"
               src={editimage}
               alt=""
             />
@@ -539,77 +405,19 @@ const Employerpp = () => {
             you add your contact details correctly.
           </p>
           <div className="info-item1-1">
-            {contactInfoEditMode ? (
-              <div className="info-box-123">
-                <label>
-                  Email address:
-                  <input
-                    type="text"
-                    value={contactInfoEditedData.emailEmployer}
-                    onChange={(e) =>
-                      setContactInfoEditedData({
-                        ...contactInfoEditedData,
-                        emailEmployer: e.target.value,
-                      })
-                    }
-                  />
-                </label>
-              </div>
-            ) : (
-              <div className="info-box-1">
-                <div className="pergunta-12345">
-                  <strong>Email address</strong>
-                </div>
-                <div className="answer-12345">{employerData.emailEmployer}</div>
-              </div>
-            )}
-
-            {contactInfoEditMode ? (
-              <div className="info-box-12-edit">
-                <label>
-                  Mobile number:
-                  <input
-                    type="text"
-                    value={contactInfoEditedData.phoneEmployer}
-                    onChange={(e) =>
-                      setContactInfoEditedData({
-                        ...contactInfoEditedData,
-                        phoneEmployer: e.target.value,
-                      })
-                    }
-                  />
-                </label>
-              </div>
-            ) : (
-              <div className="info-box-1234">
-                <div className="pergunta-123456">
-                  <strong>Mobile number:</strong>
-                </div>
-                <div className="answer-123456">
-                  {employerData.phoneEmployer}
-                </div>
-              </div>
-            )}
-
-            {contactInfoEditMode ? (
-              <div className="editing-box123">
-                <button onClick={() => handleContactInfoEditSave()}>
-                  Save
-                </button>
-                <button onClick={() => setContactInfoEditMode(false)}>
-                  Cancel
-                </button>
-              </div>
-            ) : (
-              <img
-                onClick={() => setContactInfoEditMode(true)}
-                className="imageofedit2"
-                src={editimage456}
-                alt=""
-              />
-            )}
+            <div className="pergunta-1">
+              <strong>Email address</strong>
+            </div>
+            <div className="answer-1">{employerData.emailEmployer}</div>
+          </div>
+          <div className="info-item1-1">
+            <div className="pergunta-1">
+              <strong>Mobile number:</strong>
+            </div>
+            <div className="answer-1">{employerData.phoneEmployer}</div>
           </div>
         </div>
+
         <div className="fourth-box1">
           <h2>Upload Company Logo</h2>
           <div className="flex-logo">
@@ -622,57 +430,27 @@ const Employerpp = () => {
         </div>
       </div>
 
-      <div className="before-last-box">
-        <h2>Company job applications</h2>
-        <div className="post-job-button1">
-          <button onClick={handlePostJobClick}>Post a Job</button>
+      <div className="last-box">
+        <div className="inside-last-box">
+          <h2>Company job applications</h2>
+          <h3>IT Help Desk Support</h3>
+          <div className="flex-1">
+            <h4>ONIX IT SOLUTIONS &nbsp;&nbsp;&nbsp;&nbsp;. </h4>
+            <div className="job-location">
+              <h5>Jounieh,Lebanon </h5>
+            </div>
+          </div>
+          <p className="description-small">
+            We are seeking a highly motivated and customer-oriented IT Help Desk
+            Support Specialist to join our IT
+          </p>
+          <div className="flex-2">
+            <img src={handsalary} alt="" />
+            <p className="money">$1,000 - $1,500</p>
+            <p className="datenow">6 days ago</p>
+          </div>
         </div>
       </div>
-
-      <div
-        className="last-box"
-        onClick={() => navigate(`/jobdescriptiontrial/${usernameEmployer}`)}
-      >
-        {jobApplications.length === 0 ? (
-          <div>No job applications found</div>
-        ) : (
-          jobApplications.map((job) => (
-            <div
-              onClick={() => handleJobApplicationClick(job._id)}
-              key={job._id}
-              className="job-application-container"
-            >
-              <h3>{job.jobtitle}</h3>
-              <div className="flex-1">
-                <h4>{job.companyname} &nbsp;&nbsp;&nbsp;&nbsp;. </h4>
-                <div className="job-location">
-                  <h5>{job.location}</h5>
-                </div>
-              </div>
-              <p className="description-small">
-                {" "}
-                {`${job.joboverview.split(" ").slice(0, 30).join(" ")}${
-                  job.joboverview.split(" ").length > 30 ? "..." : ""
-                }`}
-              </p>
-              <div className="flex-2">
-                <img src={handsalary} alt="" />
-                <p className="money">{`$${job.monthlysalary1} - $${job.monthlysalary2}`}</p>
-                <p className="datenow">7 days ago</p>
-              </div>
-              <div className="handledelete-img">
-                <img
-                  src={deleteimage}
-                  onClick={handleDeleteJobDescription}
-                  alt=""
-                  className=""
-                />
-              </div>
-            </div>
-          ))
-        )}
-      </div>
-      <ToastContainer />
     </div>
   );
 };

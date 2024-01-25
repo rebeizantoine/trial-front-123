@@ -1,0 +1,211 @@
+.terms-and-privacy {
+  margin-top: 40px;
+  margin-left: 30%;
+}
+
+.terms-of-use-title {
+  width: 675px !important;
+  height: 80px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 35px;
+}
+.terms-of-use-title h1 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 354px;
+  text-align: center;
+  margin-left: 22%;
+}
+.terms-of-use-second-box {
+  width: 675px !important;
+  height: 430px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 35px;
+}
+
+.terms-of-use-second-box p {
+  color: #000;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.privacy-policy {
+  width: 675px !important;
+  height: 117px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 35px;
+}
+.privacy-policy p {
+  width: 614px;
+  height: 39px;
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.privacy-policy h1 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.cookies {
+  width: 675px !important;
+  height: 202px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 35px;
+}
+.cookies h1 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.cookies p {
+  width: 614px;
+  height: 120px;
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.privacy-statement {
+  width: 675px !important;
+  height: 117px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 35px;
+}
+
+.privacy-statement h1 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.privacy-statement p {
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.Modal123 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Modal Title Styling */
+.modal-title {
+  color: #333;
+  font-family: Manrope;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Label Styling */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Textarea Styling */
+.newtermsofuse1,
+.newtermsofuse2,
+.newtermsofuse3,
+newprivacypolicy,
+newcookies,
+newchangestostatement {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px; /* Set a minimum height */
+}
+
+/* Button Styling */
+.button-update-terms {
+  text-align: right;
+}
+
+.button-update-terms button {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.button-update-terms button:last-child {
+  background-color: #d9534f; /* Use a different color for the Cancel button */
+}
+.editing-page-h1 {
+  margin-left: 100px;
+}

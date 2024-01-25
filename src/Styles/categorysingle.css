@@ -178,15 +178,17 @@
   font-weight: 400;
   line-height: normal;
 }
-.last-box {
+.last-box-123 {
   width: 920px;
   height: 100%;
   border: 1px solid #e0e0e0;
   background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin-top: 25px;
+  margin-left: 12%;
+  margin-bottom: 25px;
 }
-.last-box h2 {
+.last-box-123 h2 {
   color: #000;
   font-family: Manrope;
   font-size: 25px;
@@ -198,11 +200,11 @@
 .flex-1 {
   display: flex;
 }
-.flex-2 {
+.flex-2-123 {
   display: flex;
   margin-top: 0px !important;
 }
-.last-box h3 {
+.last-box-123 h3 {
   color: #356ae6;
   font-family: Manrope;
   font-size: 25px;
@@ -211,7 +213,7 @@
   line-height: normal;
   text-align: left;
 }
-.last-box h4 {
+.last-box-123 h4 {
   color: #000;
   font-family: Manrope;
   font-size: 20 px;
@@ -220,7 +222,7 @@
   line-height: normal;
   margin-top: -10px;
 }
-.last-box h5 {
+.last-box-123 h5 {
   color: #dfb2b2;
   font-family: Manrope;
   font-size: 20px;
@@ -242,11 +244,11 @@
   text-align: left;
   margin-top: -20px;
 }
-.last-box img {
+.last-box-123 img {
   height: 40px;
   width: 40px;
 }
-.money {
+.money-123 {
   color: #000;
   font-family: Manrope;
   font-size: 18px;
@@ -256,7 +258,7 @@
   margin-left: 20px;
   margin-top: 10px;
 }
-.datenow {
+.datenow-123 {
   color: #000;
   font-family: Manrope;
   font-size: 16px;
@@ -273,7 +275,7 @@
   left: 1100px;
 }
 
-.inside-last-box {
+.inside-last-box-123 {
   margin-left: 30px;
 }
 .beforeside {
@@ -512,7 +514,7 @@
   margin-bottom: 25px;
   width: 85px !important;
 }
-.before-last-box {
+.before-last-box-123 {
   display: flex;
   width: 920px;
 
@@ -521,7 +523,7 @@
   margin-bottom: 25px;
   margin-top: 25px;
 }
-.before-last-box h2 {
+.before-last-box-123 h2 {
   color: #000;
   font-family: Manrope;
   font-size: 25px;
@@ -546,24 +548,4 @@
   margin-top: 6px;
   margin-left: 220px;
   margin-top: 20px;
-}
-.logout-container h3 {
-  color: #000;
-  font-family: Manrope;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.logout-container {
-  position: absolute;
-  right: 5%;
-}
-.logout-container:hover {
-  cursor: pointer;
-  transform: scale(
-    1.1
-  ); /* You can adjust the scale factor according to your preference */
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }

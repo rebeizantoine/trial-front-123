@@ -10,7 +10,7 @@
 }
 
 .certify-image {
-  margin-left: -980px;
+  margin-left: -1420px;
 }
 
 .footer-start p {
@@ -58,6 +58,7 @@
   line-height: normal;
   text-transform: capitalize;
   margin-left: 170px;
+  margin-left: -180px;
 }
 .quick-links {
   margin-top: -250px;
@@ -122,4 +123,17 @@ li ::marker {
 .contact-us-footer {
   margin-left: 800px;
   margin-top: -250px;
+}
+.jobblitz-copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: -38px;
+}
+.socials img {
+  width: 43px;
+  height: 43px;
 }

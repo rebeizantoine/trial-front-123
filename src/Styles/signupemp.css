@@ -1,199 +1,210 @@
-.top-box{
-    width: 920px;
-height: 142px;
-border: 1px solid #E0E0E0;
-background: #FFF;
-margin-bottom: 30px;
-margin-top: 40px;
+.top-box {
+  width: 920px;
+  height: 142px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 30px;
+  margin-top: 40px;
 }
-.top-box h2{
-    color: #000;
-font-family: Manrope;
-font-size: 28px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-align: left;
-margin-top: 35px;
-margin-left: 35px;
+.top-box h2 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  margin-top: 35px;
+  margin-left: 35px;
 }
-.top-box p{
-    color: #000;
-font-family: Manrope;
-font-size: 13.5px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-top: -25px;
-margin-left: 35px;
-text-align: left;
+.top-box p {
+  color: #000;
+  font-family: Manrope;
+  font-size: 13.5px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -25px;
+  margin-left: 35px;
+  text-align: left;
 }
-.bot-box{
-    width: 920px;
-height: 693px;
-border: 1px solid #E0E0E0;
-background: #FFF;
-margin-bottom: 30px;
+.bot-box {
+  width: 920px;
+  height: 693px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 30px;
 }
-.username123{
-    display: flex;
-    flex-direction: column;
+.username123 {
+  display: flex;
+  flex-direction: column;
 }
-.labelf123{
-    color: #000;
-font-family: Manrope;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-left: 00px;
-text-align: left;
+.labelf123 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 00px;
+  text-align: left;
 }
-.inputf123{
-    width: 250px;
-height: 32px;
-border: 1px solid #E0E0E0;
-background: #FFF;
-margin-bottom: 20px;
+.inputf123 {
+  width: 250px;
+  height: 32px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 20px;
 }
 .bot-box h2 {
-    color: #000;
-font-family: Manrope;
-font-size: 25px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  color: #000;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .blue-asterisk {
-    color: blue;
-  }
-  
-  .para-upload{
-    color: #000;
-font-family: Manrope;
-font-size: 10px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-top: -3px;
-text-align: left;
-  }
-  .inputf1234{
-    width: 250px;
-height: 32px;
-background: #FFF;
-}
-  .leftright{
-    display: flex;
-  }
-  
-  .right-signup{
-    margin-left: 400px;
-  }
-  .lower-box{
-    width: 920px;
-height: 80px;
-border: 1px solid #E0E0E0;
-background: #FFF;
-text-align: left;
-margin-bottom: 70px;
-color: #000;
-font-family: Manrope;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-  }
-  .blue-link {
-    color: blue;
-font-family: Manrope;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-decoration: underline;
-  }
-  .all-boxes{
-    margin-left: 
-    250px;
-  }
-  .inputf12345{
-    width: 250px;
-height: 70px;
-border: 1px solid #E0E0E0;
-background: #FFF;
+  color: blue;
 }
 
-.left-signup{
-    margin-left:35px
+.para-upload {
+  color: #000;
+  font-family: Manrope;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -3px;
+  text-align: left;
 }
-.username1234{
-    display: flex;
-    flex-direction: column;
-    margin-left: -180px;
-    margin-top: 10px;
+.inputf1234 {
+  width: 250px;
+  height: 32px;
+  background: #fff;
 }
-.gender-select{
-    margin-left: -240px;
-}
-.gender-select span {
-    
-}
-.labelf1234{
-    color: #000;
-font-family: Manrope;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-left: -280px;
-text-align: left;
-margin-top:50px;
-
-}
-.bot-box h2{
-text-align: left;
-margin-left: 40px;
+.leftright {
+  display: flex;
 }
 
-.labelf12345{
-    color: #000;
-    font-family: Manrope;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: left;
-    margin-top:50px;
-    width: 100px;
-    
+.right-signup {
+  margin-left: 400px;
 }
-.labelf12345 span{
-    text-align: left;
-    margin-left: -330px;
+.lower-box {
+  width: 920px;
+  height: 80px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  text-align: left;
+  margin-bottom: 70px;
+  color: #000;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.gender123{
-    margin-left: -80px;
+.blue-link {
+  color: blue;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: underline;
 }
-.agreementpara{
-    color: #000;
-font-family: Manrope;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.all-boxes {
+  margin-left: 250px;
 }
-.register-signup{
-    width: 90px;
-height: 30px;
-background: #337AB7;
-color: #FFF;
-font-family: Manrope;
-font-size: 17px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-transition: background-color 0.3s ease;
-margin-top: 10px;
-margin-left: 400px;
+.inputf12345 {
+  width: 250px;
+  height: 70px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.left-signup {
+  margin-left: 35px;
+  margin-top: 20px;
+}
+.username1234 {
+  display: flex;
+  flex-direction: column;
+  margin-left: -180px;
+  margin-top: 10px;
+}
+.gender-select {
+  margin-left: -115px;
+}
+.gender-select {
+  display: flex;
+  width: 200px;
+}
+.labelf1234 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: -280px;
+  text-align: left;
+  margin-top: 35px;
+  margin-left: -95px;
+}
+.bot-box h2 {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.labelf12345 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 50px;
+  text-align: left;
+}
+.labelf12345 span {
+  text-align: left;
+  margin-left: -230px;
+}
+.gender123 {
+  margin-left: -80px;
+}
+.agreementpara {
+  color: #000;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: auto;
+}
+.register-signup {
+  width: 90px;
+  height: 45px;
+  background: #337ab7;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: background-color 0.3s ease;
+  margin-top: -10px;
+  margin-left: 400px;
+}
+
+.image-preview-container {
+  margin-top: -60px;
+  margin-left: 200px;
+}
+
+.image-preview {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
 }

@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const Employerdash = () => {
   const navigate = useNavigate();
+  const [employers, setEmployers] = useState([]);
+
+  useEffect(() => {
+    const fetchEmployers = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:8000/employer/getAll"
+        );
+        setEmployers(response.data);
+      } catch (error) {
+        console.error("Error fetching employers:", error);
+      }
+    };
+
+    fetchEmployers();
+  }, []);
 
   const handleEmployers = (e) => {
     e.preventDefault();
@@ -18,6 +37,37 @@ const Employerdash = () => {
     e.preventDefault();
     navigate("/removejob");
   };
+  const updatefeatured = (e) => {
+    e.preventDefault();
+    navigate("/updatefeatured");
+  };
+  const updateterms = (e) => {
+    e.preventDefault();
+    navigate("/updateterms");
+  };
+  const handleDelete = async (employerId) => {
+    try {
+      // Send a DELETE request to your backend to delete the employer
+      if (!employerId) {
+        // If employerId is not available, show an error message
+        throw new Error("Invalid employerId");
+      }
+      await axios.delete(
+        `http://localhost:8000/employer/employers/delete/${employerId}`
+      );
+      // Update the state to reflect the changes
+      setEmployers((prevEmployers) =>
+        prevEmployers.filter((employer) => employer._id !== employerId)
+      );
+
+      // Show a success message using toast or any other notification library
+      toast.success("Employer deleted successfully");
+    } catch (error) {
+      console.error("Error deleting employer:", error);
+      // Show an error message using toast or any other notification library
+      toast.error("Error deleting employer");
+    }
+  };
 
   return (
     <div>
@@ -25,13 +75,20 @@ const Employerdash = () => {
         <a href="" className="sidebar-a" onClick={handleEmployers}>
           View Employers
         </a>
-        <a href="" className="sidebar-a" onClick={handleJobSeek}>
+        <a href="" className="sidebar-a" onClick={removeJob}>
           Remove Job
         </a>
-        <a href="" className="sidebar-a" onClick={removeJob}>
+        <a href="" className="sidebar-a" onClick={handleJobSeek}>
           View Seekers
         </a>
+        <a href="" className="sidebar-a" onClick={updatefeatured}>
+          Update Featured
+        </a>
+        <a href="" className="sidebar-a" onClick={updateterms}>
+          Update terms
+        </a>
       </div>
+      <h1>Employers Details</h1>
       <table className="products-table">
         <thead>
           <tr>
@@ -39,33 +96,25 @@ const Employerdash = () => {
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
+            <th>Company</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>totiyamamoto</td>
-            <td>Antoine</td>
-            <td>Rebeiz</td>
-            <td>antoine_rebeiz@hotmail.com</td>
-          </tr>
-          <tr>
-            <td>totiyamamoto</td>
-            <td>Antoine</td>
-            <td>Rebeiz</td>
-            <td>antoine_rebeiz@hotmail.com</td>
-          </tr>
-          <tr>
-            <td>totiyamamoto</td>
-            <td>Antoine</td>
-            <td>Rebeiz</td>
-            <td>antoine_rebeiz@hotmail.com</td>
-          </tr>
-          <tr>
-            <td>totiyamamoto</td>
-            <td>Antoine</td>
-            <td>Rebeiz</td>
-            <td>antoine_rebeiz@hotmail.com</td>
-          </tr>
+          {employers.map((employer) => (
+            <tr key={employer.id}>
+              <td>{employer.usernameEmployer}</td>
+              <td>{employer.firstnameEmployer}</td>
+              <td>{employer.lastnameEmployer}</td>
+              <td>{employer.emailEmployer}</td>
+              <td>{employer.companyName}</td>
+              <td>
+                <button onClick={() => handleDelete(employer._id)}>
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

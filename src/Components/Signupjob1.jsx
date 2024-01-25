@@ -5,30 +5,30 @@ import Dropdown1 from "./Dropdown1";
 import Dropdown2 from "./Dropdown2";
 import { useNavigate } from "react-router-dom";
 
-const Singnupemp = () => {
-  const [firstnameEmployer, setFirstnameEmployer] = useState("");
-  const [lastnameEmployer, setLastnameEmployer] = useState("");
-  const [usernameEmployer, setUsernameEmployer] = useState("");
-  const [passwordnameEmployer, setPasswordEmployer] = useState("");
-  const [locationEmployer, setLocationEmployer] = useState("");
-  const [nationalityEmployer, setNationalityEmployer] = useState("");
-  const [phoneEmployer, setPhoneEmployer] = useState(0);
-  const [addressEmployer, setAddressEmployer] = useState("");
-  const [genderEmployer, setGenderEmployer] = useState("");
-  const [emailEmployer, setemailEmployer] = useState("");
+const Signupjob = () => {
+  const [firstnamejobseek, setFirstnamejobseek] = useState("");
+  const [lastnamejobseek, setLastnamejobseek] = useState("");
+  const [usernamejobseek, setUsernamejobseek] = useState("");
+  const [passwordnamejobseek, setPasswordjobseek] = useState("");
+  const [locationjobseek, setLocationjobseek] = useState("");
+  const [nationalityjobseek, setNationalityjobseek] = useState("");
+  const [phonejobseek, setPhonejobseek] = useState(0);
+  const [addressjobseek, setAddressjobseek] = useState("");
+  const [genderjobseek, setGenderjobseek] = useState("");
+  const [emailjobseek, setemailjobseek] = useState("");
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
   const navigate = useNavigate();
 
   const handleLocationChange = (selectedLocation) => {
-    setLocationEmployer(selectedLocation);
+    setLocationjobseek(selectedLocation);
   };
   const handleNationalityChange = (selectedNationality) => {
-    setNationalityEmployer(selectedNationality);
+    setNationalityjobseek(selectedNationality);
   };
 
   const validateInput = () => {
-    if (!emailEmployer || !passwordnameEmployer) {
+    if (!emailjobseek || !passwordnamejobseek) {
       setConfirmPasswordError("Email and password are required");
       return false;
     }
@@ -46,7 +46,7 @@ const Singnupemp = () => {
 
     // Reset the confirm password error before validation
     setConfirmPasswordError("");
-    if (passwordnameEmployer !== e.target.elements.confirmPassword.value) {
+    if (passwordnamejobseek !== e.target.elements.confirmPassword.value) {
       setConfirmPasswordError("Passwords do not match");
       return;
     }
@@ -58,20 +58,23 @@ const Singnupemp = () => {
         return;
       }
     }
+    const handleterms = () => {
+      navigate("/temsofuse");
+    };
 
     axios
-      .post("http://localhost:8000/employer/employers", {
-        firstnameEmployer,
-        lastnameEmployer,
-        usernameEmployer,
-        passwordnameEmployer,
-        nationalityEmployer,
-        role: "employer",
-        phoneEmployer,
-        addressEmployer,
-        emailEmployer,
-        genderEmployer,
-        locationEmployer,
+      .post("http://localhost:8000/jobseeker/jobseekers", {
+        firstnamejobseek,
+        lastnamejobseek,
+        usernamejobseek,
+        passwordnamejobseek,
+        nationalityjobseek,
+        role: "jobseeker",
+        phonejobseek,
+        addressjobseek,
+        emailjobseek,
+        genderjobseek,
+        locationjobseek,
       })
       .then((response) => {
         console.log("Response:", response);
@@ -90,7 +93,7 @@ const Singnupemp = () => {
     <div>
       <div className="all-boxes">
         <div className="top-box">
-          <h2>Employer Registration</h2>
+          <h2>Jobseeker Registration</h2>
           <p>Please, fill the form below for instant registration.</p>
         </div>
         <form onSubmit={handleSubmit}>
@@ -108,7 +111,7 @@ const Singnupemp = () => {
                     type="text"
                     id="firstName"
                     name="firstName"
-                    onChange={(e) => setFirstnameEmployer(e.target.value)}
+                    onChange={(e) => setFirstnamejobseek(e.target.value)}
                     required
                   />
                 </div>
@@ -121,7 +124,7 @@ const Singnupemp = () => {
                     type="text"
                     id="lastName"
                     name="lastName"
-                    onChange={(e) => setLastnameEmployer(e.target.value)}
+                    onChange={(e) => setLastnamejobseek(e.target.value)}
                     required
                   />
                 </div>
@@ -134,7 +137,7 @@ const Singnupemp = () => {
                     type="text"
                     id="username"
                     name="username"
-                    onChange={(e) => setUsernameEmployer(e.target.value)}
+                    onChange={(e) => setUsernamejobseek(e.target.value)}
                     required
                   />
                 </div>
@@ -147,7 +150,7 @@ const Singnupemp = () => {
                     type="email"
                     id="email"
                     name="email"
-                    onChange={(e) => setemailEmployer(e.target.value)}
+                    onChange={(e) => setemailjobseek(e.target.value)}
                     required
                   />
                 </div>
@@ -160,7 +163,7 @@ const Singnupemp = () => {
                     type="password"
                     id="password"
                     name="password"
-                    onChange={(e) => setPasswordEmployer(e.target.value)}
+                    onChange={(e) => setPasswordjobseek(e.target.value)}
                     required
                   />
                 </div>
@@ -200,7 +203,7 @@ const Singnupemp = () => {
                     type="text"
                     id="phone"
                     name="phone"
-                    onChange={(e) => setPhoneEmployer(e.target.value)}
+                    onChange={(e) => setPhonejobseek(e.target.value)}
                     required
                   />
                 </div>
@@ -212,7 +215,7 @@ const Singnupemp = () => {
                     className="inputf123"
                     id="address"
                     name="address"
-                    onChange={(e) => setAddressEmployer(e.target.value)}
+                    onChange={(e) => setAddressjobseek(e.target.value)}
                     required
                   ></textarea>
                 </div>
@@ -225,7 +228,7 @@ const Singnupemp = () => {
                       id="setC_male"
                       type="checkbox"
                       onChange={(e) =>
-                        setGenderEmployer(e.target.checked ? "Male" : "")
+                        setGenderjobseek(e.target.checked ? "Male" : "")
                       }
                     />
                     <label htmlFor="setC_male">Male</label>
@@ -234,7 +237,7 @@ const Singnupemp = () => {
                       id="setC_female"
                       type="checkbox"
                       onChange={(e) =>
-                        setGenderEmployer(e.target.checked ? "Female" : "")
+                        setGenderjobseek(e.target.checked ? "Female" : "")
                       }
                     />
                     <label htmlFor="setC_female">Female</label>
@@ -254,7 +257,7 @@ const Singnupemp = () => {
                 required
               />
               I accept all the terms of the{" "}
-              <a href="" className="blue-link">
+              <a href="" onClick={handleterms} className="blue-link">
                 license agreement
               </a>
               .
@@ -276,4 +279,4 @@ const Singnupemp = () => {
   );
 };
 
-export default Singnupemp;
+export default Signupjob;

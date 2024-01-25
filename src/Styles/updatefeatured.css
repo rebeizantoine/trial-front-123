@@ -1,0 +1,102 @@
+.container {
+  margin-left: 220px; /* Adjusted based on sidebar width */
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+.featured-employer {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: white;
+  width: 40%;
+  margin-left: 30%;
+}
+
+.featured-employer img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.featured-employer p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.featured-employer button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.featured-employer button:hover {
+  background-color: #555;
+}
+
+.featured-employer img {
+  width: 300px;
+  max-height: 250px;
+}
+.Modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 40%;
+  max-height: 70vh; /* Adjusted max height */
+  overflow-y: auto;
+  z-index: 9999; /* Adjusted z-index */
+}
+
+.Modal h2 {
+  color: #333;
+}
+
+.Modal form {
+  margin-top: 20px;
+}
+
+.Modal label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Modal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.Modal button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.Modal button:hover {
+  background-color: #555;
+}
+.label-to-fix {
+  max-width: 300px;
+}
+.Modal img {
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  margin-bottom: 10px;
+}

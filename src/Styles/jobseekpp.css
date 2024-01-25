@@ -1,261 +1,261 @@
-.all-boxes-jobseek{
-    margin-left: 280px;
-    margin-bottom: 35px;
+.all-boxes-jobseek {
+  margin-left: 280px;
+  margin-bottom: 35px;
 }
-.image-highest img{
-    width: 99px;
-height: 92px;
-border-radius: 50%;
-margin-left: -500px;
-margin-top: 20px;
+.image-highest img {
+  width: 99px;
+  height: 92px;
+  border-radius: 50%;
+  margin-left: -500px;
+  margin-top: 20px;
 }
-.profilething{
-    margin-top: -110px;
+.profilething {
+  margin-top: -110px;
 }
 
-
-
-
-.highest-box{
-    width: 920px;
-height: 142px;
-border: 1px solid #E0E0E0;
-background: #FFF;
-margin-bottom: 25px;
-margin-top: 25px;
+.highest-box {
+  width: 920px;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
-.highest-box h2{
-    color: #000;
-font-family: Manrope;
-font-size: 30px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-top: 0px;
-text-align: left;
-margin-left: 300px;
+.highest-box h2 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0px;
+  text-align: left;
+  margin-left: 300px;
 }
-.info-box{
-    margin-top: -20px;
-    text-align: left;
-    margin-left: 300px;
+.info-box {
+  margin-top: -20px;
+  text-align: left;
+  margin-left: 300px;
 }
-.pergunta{
-    display: block;
-    width: 100px;
+.pergunta {
+  display: block;
+  width: 100px;
 }
-.answer{
-    width: 200px;
+.answer {
+  width: 200px;
 }
-.info-item{
-    display: flex;
-    flex-direction: row;
+.info-item {
+  display: flex;
+  flex-direction: row;
 }
-.second-box{
-    width: 920px;
-height: 326px;
-border: 1px solid #E0E0E0;
-background: #FFF;
-margin-bottom: 25px;
+.second-box {
+  width: 920px;
+  height: 326px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 25px;
 }
-.second-box h2{
-    color: #000;
-    font-family: Manrope;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: left;
-    margin-left: 45px;
+.second-box h2 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  margin-left: 45px;
 }
-.pergunta-1{
-    display: block;
-    width: 200px;
-    text-align: left;
-    margin-left:35px;
+.pergunta-1 {
+  display: block;
+  width: 200px;
+  text-align: left;
+  margin-left: 35px;
 }
-.answer-1{
-    width: 400px;
-    text-align: left;
-    color: #000;
-font-family: Manrope;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-left: 200px;
+.answer-1 {
+  width: 400px;
+  text-align: left;
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 200px;
 }
-.info-item-1{
-    display: flex;
-    flex-direction: row;
-    margin-bottom:16px;
+.info-item-1 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
 }
-.sidebyside{
-    display: flex;
+.sidebyside {
+  display: flex;
 }
-.third-box{
-    width: 709px;
-height: 192px;
-border: 1px solid #E0E0E0;
-background: #FFF;
-margin-right: 13px;
+.third-box {
+  width: 709px;
+  height: 192px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-right: 13px;
 }
-.third-box h2{
-    color: #000;
-font-family: Manrope;
-font-size: 25px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-align: left;
-margin-left: 45px;
+.third-box h2 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+  margin-left: 45px;
 }
-.third-box p{
-    color: #000;
-font-family: Manrope;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-width: 639px;
-text-align: left;
-margin-left: 35px   ;
+.third-box p {
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 639px;
+  text-align: left;
+  margin-left: 35px;
 }
-.fourth-box{
-    width: 199px;
-height: 192px;
-border: 1px solid #E0E0E0;
-background: #FFF;
+.fourth-box {
+  width: 299px !important;
+  height: 192px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
 }
-.fourth-box h2{
-    color: #000;
-font-family: Manrope;
-font-size: 25px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.fourth-box h2 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 199px;
 }
 .fourth-box p {
-    color: #000;
-font-family: Manrope;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.fourth-box button{
-    width: 100px;
-height: 40px;
-background: #2748FC;
-color: #FFF;
-font-family: Manrope;
-font-size: 15px;
-font-style: normal;
-font-weight: 700;
-line-height: normal; 
+.fourth-box button {
+  width: 100px;
+  height: 40px;
+  background: #2748fc;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: -10px;
 }
-.pergunta-1{
-    color: #000;
-font-family: Manrope;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-
+.pergunta-1 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-.last-box{
-    width: 920px;
-height: 304px;
-border: 1px solid #E0E0E0;
-background: #FFF;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-margin-top: 25px;
+.last-box {
+  width: 920px;
+  height: 304px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 25px;
 }
-.last-box h2{
-    color: #000;
-font-family: Manrope;
-font-size: 25px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-align: left;
+.last-box h2 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
 }
-.flex-1{
-    display: flex;
+.flex-1 {
+  display: flex;
 }
-.flex-2{
-    display: flex;
+.flex-2 {
+  display: flex;
 }
-.last-box h3{
-    color: #356AE6;
-    font-family: Manrope;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-align: left;
+.last-box h3 {
+  color: #356ae6;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: left;
 }
-.last-box h4{
-    color: #000;
-font-family: Manrope;
-font-size: 20   px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-top: -10px;
+.last-box h4 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 20 px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: -10px;
 }
-.last-box h5{
-    color: #DFB2B2;
-font-family: Manrope;
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-top: -14px;
-margin-left: 20px;
+.last-box h5 {
+  color: #dfb2b2;
+  font-family: Manrope;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: -14px;
+  margin-left: 20px;
 }
-.description-small{
-    color: #000;
-font-family: Manrope;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-width: 810px;
-height: 59px;
-text-align: left;
-margin-top: -20px;
+.description-small {
+  color: #000;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 810px;
+  height: 59px;
+  text-align: left;
+  margin-top: -20px;
 }
-.last-box img{
-    height: 40px;
-    width: 40px;
+.last-box img {
+  height: 40px;
+  width: 40px;
 }
-.money{
-    color: #000;
-font-family: Manrope;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-left: 20px;
-margin-top: 10px;
+.money {
+  color: #000;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 20px;
+  margin-top: 10px;
 }
-.datenow{
-    color: #000;
-font-family: Manrope;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-left: 600px;
-margin-top:10px;
+.datenow {
+  color: #000;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 600px;
+  margin-top: 10px;
 }
 
 .last-box:hover {
-    transform: scale(1.1); /* You can adjust the scale factor according to your preference */
-    cursor: pointer;
-    transition: transform 0.3s ease; /* You can adjust the transition duration and easing function */
-  }
-.inside-last-box{
-    margin-left: 30px;
+  transform: scale(
+    1.1
+  ); /* You can adjust the scale factor according to your preference */
+  cursor: pointer;
+  transition: transform 0.3s ease; /* You can adjust the transition duration and easing function */
+}
+.inside-last-box {
+  margin-left: 30px;
 }

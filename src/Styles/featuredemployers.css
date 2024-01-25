@@ -77,3 +77,8 @@
   font-weight: 700;
   line-height: 115.1%; /* 28.775px */
 }
+
+.box-22 img {
+  max-width: 300px;
+  height: 140px;
+}

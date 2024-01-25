@@ -46,12 +46,23 @@ const Footer = () => {
           </div>
         </div>
         <div className="socials">
-          <img src={facebook} alt="" />
-          <img src={linkedin} alt="" />
-          <img src={instagram} alt="" />
+          <a href="">
+            {" "}
+            <img src={facebook} alt="" />
+          </a>
+          <a href="">
+            <img src={linkedin} alt="" />
+          </a>
+          <a href="">
+            {" "}
+            <img src={instagram} alt="" />
+          </a>
         </div>
       </div>
       <img className="vertical-line" src={vertical} alt="" />
+      <div className="jobblitz-copyright">
+        <p>Jobblitz © 2024 All Rights Reserved.</p>
+      </div>
     </div>
   );
 };
