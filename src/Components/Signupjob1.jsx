@@ -63,7 +63,7 @@ const Signupjob = () => {
     };
 
     axios
-      .post("http://localhost:8000/jobseeker/jobseekers", {
+      .post("https://backendjobblitz.onrender.com/jobseeker/jobseekers", {
         firstnamejobseek,
         lastnamejobseek,
         usernamejobseek,

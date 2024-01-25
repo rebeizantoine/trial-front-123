@@ -12,7 +12,7 @@ const Employerdash = () => {
     const fetchEmployers = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/employer/getAll"
+          "https://backendjobblitz.onrender.com/employer/getAll"
         );
         setEmployers(response.data);
       } catch (error) {
@@ -53,7 +53,7 @@ const Employerdash = () => {
         throw new Error("Invalid employerId");
       }
       await axios.delete(
-        `http://localhost:8000/employer/employers/delete/${employerId}`
+        `https://backendjobblitz.onrender.com/employer/employers/delete/${employerId}`
       );
       // Update the state to reflect the changes
       setEmployers((prevEmployers) =>

@@ -13,7 +13,7 @@ const CategorySingle = () => {
     const fetchJobData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/jobdescriptions/getByCategory/${categoryName}`
+          `https://backendjobblitz.onrender.com/jobdescriptions/getByCategory/${categoryName}`
         );
         setJobData(response.data[0]); // Assuming you want the first job in the category
       } catch (error) {

@@ -13,7 +13,7 @@ const Singlejobdescription = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/jobdescriptions/jobdescriptions/${jobId}`
+        `https://backendjobblitz.onrender.com/jobdescriptions/jobdescriptions/${jobId}`
       );
       setJobDescription(response.data);
     } catch (error) {

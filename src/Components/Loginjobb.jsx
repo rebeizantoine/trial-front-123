@@ -15,7 +15,7 @@ const Loginjobb = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/jobseeker/jobseekers/login",
+        "https://backendjobblitz.onrender.com/jobseeker/jobseekers/login",
         {
           usernamejobseek,
           passwordnamejobseek,

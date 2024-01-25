@@ -18,7 +18,7 @@ const Jobdescriptiontrial = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/jobdescriptions/employer/${usernameEmployer}`
+        `https://backendjobblitz.onrender.com/jobdescriptions/employer/${usernameEmployer}`
       );
       setJobDescription(response.data);
 
@@ -49,7 +49,10 @@ const Jobdescriptiontrial = () => {
 
   const handleSaveEdit = () => {
     axios
-      .put(`http://localhost:8000/jobdescriptions/${jobId}`, editedJob)
+      .put(
+        `https://backendjobblitz.onrender.com/jobdescriptions/${jobId}`,
+        editedJob
+      )
       .then((response) => {
         console.log("Job details updated successfully:", response);
         setIsEditing(false);

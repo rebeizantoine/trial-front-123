@@ -32,7 +32,7 @@ const Jobseekpp = () => {
   const handleHighestBoxEditSave = async () => {
     try {
       await axios.put(
-        `http://localhost:8000/jobseeker/jobseekers/update/${jobseekData._id}`,
+        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/update/${jobseekData._id}`,
         highestBoxEditedData,
         {
           headers: {
@@ -42,7 +42,7 @@ const Jobseekpp = () => {
       );
 
       const response = await axios.get(
-        `http://localhost:8000/jobseeker/jobseekers/username/${usernamejobseek}`
+        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/username/${usernamejobseek}`
       );
       setJobseekData(response.data.data);
       setHighestBoxEditMode(false);
@@ -62,7 +62,7 @@ const Jobseekpp = () => {
       formData.append("cvFile", cvFile);
 
       const response = await axios.post(
-        `http://localhost:8000/cv/${jobseekData._id}`, // Update the URL to match your backend route
+        `https://backendjobblitz.onrender.com/cv/${jobseekData._id}`, // Update the URL to match your backend route
         formData,
         {
           headers: {
@@ -76,7 +76,7 @@ const Jobseekpp = () => {
 
       // Update the jobseeker data with the uploaded CV path
       await axios.put(
-        `http://localhost:8000/jobseeker/jobseekers/update/${jobseekData._id}`,
+        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/update/${jobseekData._id}`,
         { cvjobseek: uploadedCVPath },
         {
           headers: {
@@ -94,7 +94,7 @@ const Jobseekpp = () => {
   const handleContactInfoEditSave = async () => {
     try {
       await axios.put(
-        `http://localhost:8000/jobseeker/jobseekers/update/${jobseekData._id}`,
+        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/update/${jobseekData._id}`,
         contactInfoEditedData,
         {
           headers: {
@@ -103,7 +103,7 @@ const Jobseekpp = () => {
         }
       );
       const response = await axios.get(
-        `http://localhost:8000/jobseeker/jobseekers/username/${usernamejobseek}`
+        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/username/${usernamejobseek}`
       );
       setJobseekData(response.data.data);
       setContactInfoEditMode(false);
@@ -120,7 +120,7 @@ const Jobseekpp = () => {
     const fetchJobseekData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/jobseeker/jobseekers/username/${usernamejobseek}`
+          `https://backendjobblitz.onrender.com/jobseeker/jobseekers/username/${usernamejobseek}`
         );
         setJobseekData(response.data);
 

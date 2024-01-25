@@ -13,7 +13,7 @@ const Loginemp = () => {
     try {
       // Simulate a login request using Axios
       const response = await axios.post(
-        "http://localhost:8000/employer/login",
+        "https://backendjobblitz.onrender.com/employer/login",
         {
           usernameEmployer,
           passwordnameEmployer,

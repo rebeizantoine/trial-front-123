@@ -14,7 +14,7 @@ const Jobdecriptionedit = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/jobdescriptions/jobdescriptions/${id}`
+        `https://backendjobblitz.onrender.com/jobdescriptions/jobdescriptions/${id}`
       );
       setJobDescription(response.data);
     } catch (error) {
@@ -44,7 +44,10 @@ const Jobdecriptionedit = () => {
     // Implement the logic to save the edited job details
     // For simplicity, you can send a PUT request to update the job on the server
     axios
-      .put(`http://localhost:8000/jobdescriptions/${id}`, editedJob)
+      .put(
+        `https://backendjobblitz.onrender.com/jobdescriptions/${id}`,
+        editedJob
+      )
       .then((response) => {
         console.log("Job details updated successfully:", response);
         setIsEditing(false);

@@ -12,7 +12,7 @@ const Featuredjobs = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/jobdescriptions/getAll"
+          "https://backendjobblitz.onrender.com/jobdescriptions/getAll"
         );
         setJobs(response.data.slice(0, 6));
       } catch (error) {

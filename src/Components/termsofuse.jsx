@@ -8,7 +8,9 @@ const Termsofuse = () => {
   useEffect(() => {
     const fetchTermsData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/terms/terms");
+        const response = await axios.get(
+          "https://backendjobblitz.onrender.com/terms/terms"
+        );
         setTermsData(response.data);
       } catch (error) {
         console.error("Error fetching terms data:", error);

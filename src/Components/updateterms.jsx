@@ -22,7 +22,9 @@ const Updateterms = () => {
 
   const fetchTerms = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/terms/terms");
+      const response = await axios.get(
+        "https://backendjobblitz.onrender.com/terms/terms"
+      );
       setTerms(response.data);
     } catch (error) {
       console.error("Error fetching Terms:", error);
@@ -69,7 +71,7 @@ const Updateterms = () => {
   const handleUpdateTerm = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:8000/terms/terms/update/${selectedTerm._id}`,
+        `https://backendjobblitz.onrender.com/terms/terms/update/${selectedTerm._id}`,
         updatedTerm
       );
 

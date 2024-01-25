@@ -60,7 +60,7 @@ const Singnupemp = () => {
     }
 
     axios
-      .post("http://localhost:8000/employer/employers", {
+      .post("https://backendjobblitz.onrender.com/employer/employers", {
         firstnameEmployer,
         lastnameEmployer,
         usernameEmployer,

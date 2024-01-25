@@ -12,7 +12,7 @@ const Jobseekdash = () => {
     const fetchJobseekers = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/jobseeker/jobseekers"
+          "https://backendjobblitz.onrender.com/jobseeker/jobseekers"
         );
         setJobseekers(response.data);
       } catch (error) {
@@ -53,7 +53,7 @@ const Jobseekdash = () => {
         throw new Error("Invalid jobseekerId");
       }
       await axios.delete(
-        `http://localhost:8000/jobseeker/jobseekers/${jobseekerId}`
+        `https://backendjobblitz.onrender.com/jobseeker/jobseekers/${jobseekerId}`
       );
       // Update the state to reflect the changes
       setJobseekers((prevJobseekers) =>

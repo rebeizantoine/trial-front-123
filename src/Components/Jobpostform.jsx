@@ -79,7 +79,10 @@ const JobPostForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8000/jobdescriptions/add", formData);
+      await axios.post(
+        "https://backendjobblitz.onrender.com/jobdescriptions/add",
+        formData
+      );
       toast.success("Job post added successfully!");
       // Handle successful submission (e.g., show a success message or redirect)
       navigate(`/jobdescriptiontrial/${formData.usernameEmployer}`);

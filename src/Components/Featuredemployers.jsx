@@ -9,7 +9,7 @@ const Featuredemployers = () => {
     const fetchFeaturedEmployers = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/featuredemployer/"
+          "https://backendjobblitz.onrender.com/featuredemployer/"
         );
         setFeaturedEmployers(response.data);
       } catch (error) {
