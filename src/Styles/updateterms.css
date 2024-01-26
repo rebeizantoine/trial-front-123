@@ -209,3 +209,8 @@ newchangestostatement {
 .editing-page-h1 {
   margin-left: 100px;
 }
+.button-edit-terms {
+  position: absolute;
+  top: 223px;
+  right: 400px;
+}

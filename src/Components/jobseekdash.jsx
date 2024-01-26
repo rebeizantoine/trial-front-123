@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import logoutimage from "../Images/logout.png";
+import "../Styles/removejob.css";
 
 const Jobseekdash = () => {
   const navigate = useNavigate();
@@ -68,6 +70,11 @@ const Jobseekdash = () => {
       toast.error("Error deleting jobseeker");
     }
   };
+  const handleLogout = () => {
+    // Clear local storage and navigate to the home route
+    localStorage.clear();
+    navigate("/");
+  };
   return (
     <div>
       <div className="sidebar">
@@ -86,7 +93,14 @@ const Jobseekdash = () => {
         <a href="" className="sidebar-a" onClick={updateterms}>
           Update terms
         </a>
+        <img
+          className="logout-dash-image"
+          src={logoutimage}
+          onClick={handleLogout}
+          alt=""
+        />
       </div>
+      import
       <h1>Jobseekers Details</h1>
       <table className="products-table">
         <thead>

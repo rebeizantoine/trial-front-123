@@ -50,7 +50,6 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: ;
   overflow-x: hidden;
   padding-top: 20px;
   margin-top: 110px;
@@ -295,4 +294,8 @@
     width: 240px;
     margin-left: 40%;
   }
+}
+.logout-image-123 {
+  position: absolute;
+  top: 200px;
 }

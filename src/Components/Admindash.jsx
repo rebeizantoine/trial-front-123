@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../Styles/admindash.css";
+import logoutimage from "../Images/logout.png";
 
 const Admindash = () => {
   const navigate = useNavigate();
+  const [employers, setEmployers] = useState([]);
 
-  const handleEmployers = (e) => {
+  const handleEmployers = async (e) => {
     e.preventDefault();
-    navigate("/employerdash");
+    try {
+      const response = await axios.get(
+        "https://backendjobblitz.onrender.com/employer/getAll"
+      );
+      setEmployers(response.data);
+    } catch (error) {
+      console.error("Error fetching employers:", error.message);
+    }
   };
+
+  useEffect(() => {
+    // Fetch employers when the component mounts
+    handleEmployers();
+  }, []); // Empty dependency array to run the effect only once
 
   const handleJobSeek = (e) => {
     e.preventDefault();
@@ -27,6 +42,11 @@ const Admindash = () => {
   const updateterms = (e) => {
     e.preventDefault();
     navigate("/updateterms");
+  };
+  const handleLogout = () => {
+    // Clear local storage and navigate to the home route
+    localStorage.clear();
+    navigate("/");
   };
 
   return (
@@ -58,32 +78,22 @@ const Admindash = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>totiyamamoto</td>
-            <td>Antoine</td>
-            <td>Rebeiz</td>
-            <td>antoine_rebeiz@hotmail.com</td>
-          </tr>
-          <tr>
-            <td>totiyamamoto</td>
-            <td>Antoine</td>
-            <td>Rebeiz</td>
-            <td>antoine_rebeiz@hotmail.com</td>
-          </tr>
-          <tr>
-            <td>totiyamamoto</td>
-            <td>Antoine</td>
-            <td>Rebeiz</td>
-            <td>antoine_rebeiz@hotmail.com</td>
-          </tr>
-          <tr>
-            <td>totiyamamoto</td>
-            <td>Antoine</td>
-            <td>Rebeiz</td>
-            <td>antoine_rebeiz@hotmail.com</td>
-          </tr>
+          {employers.map((employer) => (
+            <tr key={employer._id}>
+              <td>{employer.usernameEmployer}</td>
+              <td>{employer.firstnameEmployer}</td>
+              <td>{employer.lastnameEmployer}</td>
+              <td>{employer.emailEmployer}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
+      <img
+        className="logout-image-123"
+        src={logoutimage}
+        onClick={handleLogout}
+        alt="Logout"
+      />
     </div>
   );
 };

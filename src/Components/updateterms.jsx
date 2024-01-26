@@ -4,7 +4,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import Modal from "react-modal";
+import editgreenimage from "../Images/edit-green.png";
 import "../Styles/updateterms.css";
+import logoutimage from "../Images/logout.png";
+import "../Styles/removejob.css";
 
 const Updateterms = () => {
   const navigate = useNavigate();
@@ -84,6 +87,11 @@ const Updateterms = () => {
       toast.error("Error updating term");
     }
   };
+  const handleLogout = () => {
+    // Clear local storage and navigate to the home route
+    localStorage.clear();
+    navigate("/");
+  };
 
   return (
     <div>
@@ -103,6 +111,12 @@ const Updateterms = () => {
         <a href="" className="sidebar-a" onClick={() => setModalIsOpen(true)}>
           Update terms
         </a>
+        <img
+          className="logout-dash-image"
+          src={logoutimage}
+          onClick={handleLogout}
+          alt=""
+        />
       </div>
       <h1 className="editing-page-h1">Terms and Conditions</h1>
       <div className="terms-and-privacy">
@@ -129,9 +143,11 @@ const Updateterms = () => {
               <p>{term.changestostatement}</p>
             </div>
             <div className="button-edit-terms">
-              <button type="button" onClick={() => handleEditClick(term)}>
-                Edit
-              </button>
+              <img
+                src={editgreenimage}
+                onClick={() => handleEditClick(term)}
+                alt=""
+              />
             </div>
           </div>
         ))}

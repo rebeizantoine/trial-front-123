@@ -5,6 +5,8 @@ import "../Styles/updatefeatured.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import logoutimage from "../Images/logout.png";
+import "../Styles/removejob.css";
 
 const UpdateFeatured = () => {
   const navigate = useNavigate();
@@ -109,6 +111,11 @@ const UpdateFeatured = () => {
 
     setNewEmployerImage(file);
   };
+  const handleLogout = () => {
+    // Clear local storage and navigate to the home route
+    localStorage.clear();
+    navigate("/");
+  };
 
   return (
     <div>
@@ -125,9 +132,15 @@ const UpdateFeatured = () => {
         <a href="" className="sidebar-a" onClick={updatefeatured}>
           Update Featured
         </a>
-        <a href="" className="sidebar-a" onClick={updateterms}>
+        <a href="" className="sidebar-a" onClick={() => setModalIsOpen(true)}>
           Update terms
         </a>
+        <img
+          className="logout-dash-image"
+          src={logoutimage}
+          onClick={handleLogout}
+          alt=""
+        />
       </div>
 
       <div>

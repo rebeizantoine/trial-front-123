@@ -1,0 +1,123 @@
+.last-box123 {
+  width: 920px;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 25px;
+}
+.last-box123 {
+  width: 920px;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 25px;
+  margin-left: 20%;
+}
+.last-box123 h2 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+.flex-1 {
+  display: flex;
+}
+.flex-2 {
+  display: flex;
+  margin-top: 0px !important;
+}
+.last-box123 h3 {
+  color: #356ae6;
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: left;
+}
+.last-box123 h4 {
+  color: #000;
+  font-family: Manrope;
+  font-size: 20 px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: -10px;
+}
+.last-box123 h5 {
+  color: #dfb2b2;
+  font-family: Manrope;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: -14px;
+  margin-left: 20px;
+}
+.description-small {
+  color: #000;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 810px;
+  height: 59px;
+  text-align: left;
+  margin-top: -20px;
+}
+.last-box123 img {
+  height: 40px;
+  width: 40px;
+}
+.money {
+  color: #000;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.datenow {
+  color: #000;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 600px;
+  margin-top: 10px;
+}
+.editimage123 {
+  width: 30px;
+  position: absolute;
+  top: 150px;
+  left: 1100px;
+}
+
+.inside-last-box123 {
+  margin-left: 30px;
+}
+.beforeside {
+  width: 920px;
+  height: 432px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 25px;
+}
+.logout-dash-image {
+  /* Your existing styles */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: all 0.3s ease; /* Add a smooth transition effect */
+}
+
+.logout-dash-image:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}

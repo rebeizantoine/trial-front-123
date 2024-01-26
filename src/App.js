@@ -34,6 +34,10 @@ import Contact1 from "./Components/cotactus";
 import JobPostForm from "./Components/Jobpostform";
 import CategorySingle from "./Components/categorySingle";
 import Singlejobdescription from "./Components/singlejobdescription";
+import Adminlogin from "./Components/Adminlogin";
+import AdminRoute from "./Components/AdminProtectedRoute";
+import JobseekerRoute from "./Components/JobseekerProtectedRoute";
+import EmployerRoute from "./Components/EmployerProtectedRoute";
 
 function App() {
   return (
@@ -56,7 +60,8 @@ function App() {
           <Route path="/login" element={<Loginjobb />} />
           <Route path="/loginemp" element={<Loginemp />} />
           <Route path="/signupemp" element={<Signupemp />} />
-
+          <Route path="/adminlogin" element={<Adminlogin />} />
+          ''
           <Route path="/jobseekerpp/:usernamejobseek" element={<Jobseekpp />} />
           <Route
             path="/employerpp/:usernameEmployer"
@@ -76,7 +81,6 @@ function App() {
             path="/jobdescriptiontrialedit"
             element={<Jobdescriptionedit />}
           />
-
           <Route path="/category" element={<Category />} />
           <Route path="/category/:categoryName" element={<CategorySingle />} />
           <Route path="/admindash" element={<Admindash />} />
@@ -92,7 +96,6 @@ function App() {
             path="/singlejobdescription/jobdescription/:jobId"
             element={<Singlejobdescription />}
           />
-
           <Route
             path="/contact"
             element={
@@ -109,7 +112,6 @@ function App() {
               </>
             }
           />
-
           {/* <Route path="/testimonials" element={<Testimonials testimonialData={data} />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
