@@ -35,9 +35,9 @@ import Singlejobdescription from "./Components/singlejobdescription";
 import Adminlogin from "./Components/Adminlogin";
 import AdminRoutes from "./Components/AdminProtectedRoute";
 import JobseekerRoutes from "./Components/JobseekerProtectedRoute";
-import Updateterms from "./Components/Updateterms";
 import EmployerRoutes from "./Components/EmployerProtectedRoute";
 import EmployerppReadOnly from "./Components/EmployerppReadonly";
+import Updateterms from "./Components/updateterms";
 function App() {
   return (
     <div className="App">
