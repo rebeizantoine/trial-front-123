@@ -73,9 +73,9 @@ const Employerdash = () => {
   const handleLogout = () => {
     // Clear local storage and navigate to the home route
     localStorage.clear();
+    sessionStorage.clear();
     navigate("/");
   };
-
   return (
     <div>
       <div className="sidebar">

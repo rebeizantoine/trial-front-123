@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "../Styles/singlejobdescription.css";
 
 const Singlejobdescription = () => {
   const { jobId } = useParams();
   const [jobDescription, setJobDescription] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const fetchData = async () => {
     try {
@@ -35,12 +37,24 @@ const Singlejobdescription = () => {
   if (error) {
     return <div>Error: {error}</div>;
   }
+  const handleViewContactInformation = () => {
+    const usernameEmployer = jobDescription?.usernameEmployer;
+
+    if (usernameEmployer) {
+      navigate(`/employerppreadonly/${usernameEmployer}`);
+    }
+  };
 
   return (
     <div className="job-description-big">
       {jobDescription ? (
         <>
           <h1 className="title-position">{jobDescription.jobtitle}</h1>
+          <div className="view-contact-button">
+            <button onClick={handleViewContactInformation}>
+              View Contact Information
+            </button>
+          </div>
           <h2 className="company-position">{jobDescription.companyname}</h2>
           <div className="first-flex1">
             <div className="location-position">{jobDescription.location}</div>

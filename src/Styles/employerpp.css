@@ -63,6 +63,7 @@
   border: 1px solid #e0e0e0;
   background: #fff;
   margin-bottom: 25px;
+  margin-top: 25px;
 }
 .save-top-1 {
   margin-right: 30px;
@@ -291,6 +292,9 @@
   font-weight: 400;
   line-height: normal;
   text-align: left;
+}
+.company-info-info {
+  margin-left: 45px !important;
 }
 .flex-logo {
   display: flex;

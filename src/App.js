@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 import "./App.css";
 import Featuredjobs from "./Components/Featuredjobs";
@@ -29,16 +28,16 @@ import Jobdescriptiontrial from "./Components/Jobdescriptiontrial";
 import Jobdescriptionedit from "./Components/Jobdescriptionedit";
 import UpdateFeatured from "./Components/updatefeatured";
 import Termsofuse from "./Components/termsofuse";
-import Updateterms from "./Components/updateterms";
 import Contact1 from "./Components/cotactus";
 import JobPostForm from "./Components/Jobpostform";
 import CategorySingle from "./Components/categorySingle";
 import Singlejobdescription from "./Components/singlejobdescription";
 import Adminlogin from "./Components/Adminlogin";
-import AdminRoute from "./Components/AdminProtectedRoute";
-import JobseekerRoute from "./Components/JobseekerProtectedRoute";
-import EmployerRoute from "./Components/EmployerProtectedRoute";
-
+import AdminRoutes from "./Components/AdminProtectedRoute";
+import JobseekerRoutes from "./Components/JobseekerProtectedRoute";
+import Updateterms from "./Components/Updateterms";
+import EmployerRoutes from "./Components/EmployerProtectedRoute";
+import EmployerppReadOnly from "./Components/EmployerppReadonly";
 function App() {
   return (
     <div className="App">
@@ -61,13 +60,22 @@ function App() {
           <Route path="/loginemp" element={<Loginemp />} />
           <Route path="/signupemp" element={<Signupemp />} />
           <Route path="/adminlogin" element={<Adminlogin />} />
-          ''
-          <Route path="/jobseekerpp/:usernamejobseek" element={<Jobseekpp />} />
-          <Route
-            path="/employerpp/:usernameEmployer"
-            element={<Employerpp />}
-          />
-          <Route path="/employerpp" element={<Employerpp />} />
+
+          <Route element={<JobseekerRoutes />}>
+            <Route
+              path="/jobseekerpp/:usernamejobseek"
+              element={<Jobseekpp />}
+            />
+            <Route path="/jobseekerpp" element={<Jobseekpp />} />
+          </Route>
+          <Route element={<EmployerRoutes />}>
+            <Route path="/employerpp" element={<Employerpp />} />
+            <Route
+              path="/employerpp/:usernameEmployer"
+              element={<Employerpp />}
+            />
+          </Route>
+
           <Route path="/jobdescription" element={<Jobdescription />} />
           <Route
             path="/jobdescriptiontrial/:usernameEmployer"
@@ -83,36 +91,26 @@ function App() {
           />
           <Route path="/category" element={<Category />} />
           <Route path="/category/:categoryName" element={<CategorySingle />} />
-          <Route path="/admindash" element={<Admindash />} />
-          <Route path="/employerdash" element={<Employerdash />} />
-          <Route path="/jobseekdash" element={<Jobseekdash />} />
-          <Route path="/removejob" element={<Removejob />} />
-          <Route path="/updatefeatured" element={<UpdateFeatured />} />
-          <Route path="/cv" element={<Cv />} />
+          <Route element={<AdminRoutes />}>
+            <Route path="/admindash" element={<Employerdash />} />
+            <Route path="/jobseekdash" element={<Jobseekdash />} />
+            <Route path="/removejob" element={<Removejob />} />
+            <Route path="/updatefeatured" element={<UpdateFeatured />} />
+            <Route path="/employerdash" element={<Employerdash />} />
+            <Route path="/updateterms" element={<Updateterms />} />
+          </Route>
           <Route path="/termsofuse" element={<Termsofuse />} />
-          <Route path="/updateterms" element={<Updateterms />} />
+
+          <Route path="/cv" element={<Cv />} />
           <Route path="/jobpost/:usernameEmployer" element={<JobPostForm />} />
           <Route
             path="/singlejobdescription/jobdescription/:jobId"
             element={<Singlejobdescription />}
           />
           <Route
-            path="/contact"
-            element={
-              <>
-                <Contact1 />
-              </>
-            }
+            path="/employerppreadonly/:usernameEmployer"
+            element={<EmployerppReadOnly />}
           />
-          <Route
-            path="/contact"
-            element={
-              <>
-                <Contact1 />
-              </>
-            }
-          />
-          {/* <Route path="/testimonials" element={<Testimonials testimonialData={data} />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

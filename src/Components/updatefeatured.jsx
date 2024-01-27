@@ -114,6 +114,7 @@ const UpdateFeatured = () => {
   const handleLogout = () => {
     // Clear local storage and navigate to the home route
     localStorage.clear();
+    sessionStorage.clear();
     navigate("/");
   };
 
@@ -132,7 +133,7 @@ const UpdateFeatured = () => {
         <a href="" className="sidebar-a" onClick={updatefeatured}>
           Update Featured
         </a>
-        <a href="" className="sidebar-a" onClick={() => setModalIsOpen(true)}>
+        <a href="" className="sidebar-a" onClick={updateterms}>
           Update terms
         </a>
         <img

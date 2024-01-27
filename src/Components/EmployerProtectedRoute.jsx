@@ -1,30 +1,14 @@
-// File: EmployerRoute.js
 import React from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
-const EmployerRoute = ({ element }) => {
-  const isAuthenticated = sessionStorage.getItem("authToken");
+const useAuth = () => {
   const userRole = sessionStorage.getItem("userRole");
-
-  if (!isAuthenticated || userRole !== "employer") {
-    return <Navigate to="/login" />;
-  }
-
-  // Define the employer routes configuration
-  const employerRoutes = [
-    {
-      path: "/employerpp/:usernameEmployer",
-      element: element,
-    },
-    {
-      path: "/employerpp",
-      element: element,
-    },
-    // Add more routes if needed
-  ];
-
-  // Use the Routes component to render the employer routes
-  return <Routes routes={employerRoutes} />;
+  return userRole === "employer";
 };
 
-export default EmployerRoute;
+const EmployerRoutes = () => {
+  const isAuth = useAuth();
+  return isAuth ? <Outlet /> : <Navigate to="/loginemp" />;
+};
+
+export default EmployerRoutes;

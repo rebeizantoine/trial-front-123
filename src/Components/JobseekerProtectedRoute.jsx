@@ -1,16 +1,14 @@
-// File: JobseekerProtectedRoute.js
 import React from "react";
-import { Route, Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
-const JobseekerProtectedRoute = ({ element }) => {
-  const isAuthenticated = sessionStorage.getItem("authToken");
+const useAuth = () => {
   const userRole = sessionStorage.getItem("userRole");
-
-  if (!isAuthenticated || userRole !== "jobseeker") {
-    return <Navigate to="/login" />;
-  }
-
-  return <Route element={element} />;
+  return userRole === "jobseeker";
 };
 
-export default JobseekerProtectedRoute;
+const JobseekerRoutes = () => {
+  const isAuth = useAuth();
+  return isAuth ? <Outlet /> : <Navigate to="/login" />;
+};
+
+export default JobseekerRoutes;

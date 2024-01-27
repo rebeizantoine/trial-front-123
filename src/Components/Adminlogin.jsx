@@ -14,6 +14,7 @@ const Loginjobb = () => {
 
   const handleLogin = async () => {
     try {
+      console.log("Logging in...");
       const response = await axios.post(
         "https://backendjobblitz.onrender.com/admin/admins/login",
         {
@@ -24,11 +25,19 @@ const Loginjobb = () => {
 
       console.log("Login Successful:", response.data);
 
-      // Save user role to sessionStorage
-      sessionStorage.setItem("userRole", "admin");
-      navigate(`/admindash`);
+      const authToken = response.data.data;
 
-      // Handle successful login, such as storing the user token in state or localStorage
+      // Save the authentication token and user role to sessionStorage
+      sessionStorage.setItem("authToken", authToken);
+      sessionStorage.setItem("userRole", "admin");
+
+      console.log("Session Storage Updated");
+
+      // Wait for sessionStorage to be updated before navigating
+      await new Promise((resolve) => setTimeout(resolve, 0));
+
+      console.log("Navigating to /jobseekdash");
+      navigate(`/jobseekdash`);
     } catch (error) {
       console.error("Login Failed:", error);
       setLoginError("Invalid username or password");

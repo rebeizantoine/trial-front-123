@@ -11,6 +11,7 @@ const Loginemp = () => {
 
   const handleLogin = async () => {
     try {
+      console.log("Logging in...");
       // Simulate a login request using Axios
       const response = await axios.post(
         "https://backendjobblitz.onrender.com/employer/login",
@@ -24,6 +25,10 @@ const Loginemp = () => {
 
       // Save user role to sessionStorage
       sessionStorage.setItem("userRole", "employer");
+
+      console.log("Session Storage Updated");
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      console.log("Navigating to /employerpp");
 
       navigate(`/employerpp/${usernameEmployer}`);
       // Handle successful login, such as storing the user token in state or localStorage

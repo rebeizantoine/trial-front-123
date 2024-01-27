@@ -1,16 +1,14 @@
-// File: AdminRoute.js
 import React from "react";
-import { Route, Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
-const AdminRoute = ({ element }) => {
-  const isAuthenticated = sessionStorage.getItem("authToken");
+const useAuth = () => {
   const userRole = sessionStorage.getItem("userRole");
-
-  if (!isAuthenticated || userRole !== "admin") {
-    return <Navigate to="/login" />;
-  }
-
-  return <Route element={element} />;
+  return userRole === "admin";
 };
 
-export default AdminRoute;
+const AdminRoutes = () => {
+  const isAuth = useAuth();
+  return isAuth ? <Outlet /> : <Navigate to="/adminlogin" />;
+};
+
+export default AdminRoutes;

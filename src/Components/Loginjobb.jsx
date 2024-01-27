@@ -26,6 +26,9 @@ const Loginjobb = () => {
 
       // Save user role to sessionStorage
       sessionStorage.setItem("userRole", "jobseeker");
+      console.log("Session Storage Updated");
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      console.log("Navigating to /employerpp/${usernamejobseek}");
 
       navigate(`/jobseekerpp/${usernamejobseek}`);
       // Handle successful login, such as storing the user token in state or localStorage
