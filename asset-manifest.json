@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/trial-front-123/static/css/main.773ba21e.css",
+    "main.js": "/trial-front-123/static/js/main.b9ed36f1.js",
+    "static/media/Component9.png": "/trial-front-123/static/media/Component9.85911eb7437b7a600003.png",
+    "static/media/aboutus.png": "/trial-front-123/static/media/aboutus.e10f0b1b168bd4c689ee.png",
+    "index.html": "/trial-front-123/index.html",
+    "main.773ba21e.css.map": "/trial-front-123/static/css/main.773ba21e.css.map",
+    "main.b9ed36f1.js.map": "/trial-front-123/static/js/main.b9ed36f1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.773ba21e.css",
+    "static/js/main.b9ed36f1.js"
+  ]
+}
