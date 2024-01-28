@@ -150,6 +150,7 @@ const Updateterms = () => {
                 alt=""
               />
             </div>
+            <ToastContainer />
           </div>
         ))}
       </div>

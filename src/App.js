@@ -6,8 +6,6 @@ import Featuredjobs from "./Components/Featuredjobs";
 import Header from "./Components/Header";
 import Hero from "./Components/Hero";
 import Featuredemployers from "./Components/Featuredemployers";
-import Testimonials from "./Components/Testimonials";
-import data from "./data.json";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Loginemp from "./Components/Loginemp";
@@ -19,7 +17,6 @@ import Jobseekpp from "./Components/Jobseekpp";
 import Employerpp from "./Components/Employerpp";
 import Jobdescription from "./Components/Jobdescription";
 import Category from "./Components/Category";
-import Admindash from "./Components/Admindash";
 import Employerdash from "./Components/Employerdash";
 import Removejob from "./Components/removejob";
 import Jobseekdash from "./Components/jobseekdash";
@@ -28,7 +25,6 @@ import Jobdescriptiontrial from "./Components/Jobdescriptiontrial";
 import Jobdescriptionedit from "./Components/Jobdescriptionedit";
 import UpdateFeatured from "./Components/updatefeatured";
 import Termsofuse from "./Components/termsofuse";
-import Contact1 from "./Components/cotactus";
 import JobPostForm from "./Components/Jobpostform";
 import CategorySingle from "./Components/categorySingle";
 import Singlejobdescription from "./Components/singlejobdescription";
@@ -37,7 +33,7 @@ import AdminRoutes from "./Components/AdminProtectedRoute";
 import JobseekerRoutes from "./Components/JobseekerProtectedRoute";
 import EmployerRoutes from "./Components/EmployerProtectedRoute";
 import EmployerppReadOnly from "./Components/EmployerppReadonly";
-import Updateterms from "./Components/updateterms";
+import Updateterms from "./Components/Updateterms";
 function App() {
   return (
     <div className="App">
